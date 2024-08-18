@@ -4,7 +4,7 @@ if [ "$(uname -o)" = "Android" ]; then
 else
   sudo apt install zsh git -y
 fi
-
+curl https://raw.githubusercontent.com/linuxscreen/termux/main/zshrc.zsh-template -o ~/.zshrc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sed '/exec zsh -l/d') --skip-chsh --keep-zshrc"
 if [ -d "$HOME/.oh-my-zsh" ]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
